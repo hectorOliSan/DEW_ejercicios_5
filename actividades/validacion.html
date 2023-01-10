@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validación Formulario</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/icons/bootstrap-icons.css" />
+  </head>
+  <body onload="cargar_fecha()">
+    <main class="container p-5">
+      <div class="d-flex justify-content-center align-items-center">
+        <p class="my-0 mx-2 fs-2 text-center font-monospace">
+          Validación de un formulario:
+        </p>
+        <button
+          class="mx-2 col-sm-6 col-md-4 col-lg-2 btn btn-primary btn-sm"
+          onclick="descripcion()"
+        >
+          Mostrar descripción
+        </button>
+        <dialog id="modal" class="col-6 rounded">
+          <div class="mb-3 d-flex justify-content-end">
+            <button class="btn btn-secondary btn-sm" onclick="cerrar()">
+              <b><i class="bi bi-x-lg"></i></b>
+            </button>
+          </div>
+          <p class="fs-5 font-monospace text-center">
+            <b>Validación de un formulario:</b> Se diseñará un formulario como
+            el de la imagen y al pulsarse el botón VALIDA FORMULARIO se
+            realizarán las siguientes comprobaciones:
+          </p>
+          <ul class="font-monospace">
+            <li>Ningún cuadro de texto (input type="text") quedará vacío</li>
+            <li>
+              En nombre y apellidos solo se admitirán caracteres alfabéticos
+              tanto en mayúsculas como en minúsculas
+            </li>
+            <li>
+              El expediente será un número natural en el rango 340000000000 a
+              349999999999
+            </li>
+            <li>La edad otro número natural en el rango 18 a 120</li>
+            <li>Fecha de permiso una fecha válida sin especificar rango</li>
+            <li>
+              La matrícula responderá al patrón
+              "NNNN[BCDFGHJKLMNPQRSTVWXYZ][BCDFGHJKLMNPQRSTVWXY Z]
+              [BCDFGHJKLMNPORSTVWXYZ]"
+            </li>
+            <li>Importe entero o real sin signo</li>
+            <li>Mes de expiración entero en el rango 1 a 12</li>
+            <li>Año de expiración entero en el rango 2001 a 2100</li>
+            <li>
+              Se realizará la validación de la tarjeta para las opciones a)
+              Genérica. b) American Express. c) Diner's Club. e) Master Card y
+              f) Visa.
+            </li>
+          </ul>
+          <p class="fs-5 font-monospace text-center">
+            Las rutinas básicas de validación se incluirán a través del archivo
+            Validación.js
+          </p>
+        </dialog>
+      </div>
+
+      <div class="mt-4 d-flex justify-content-center">
+        <a class="mx-2 btn btn-secondary" href="../index.html">Volver</a>
+      </div>
+    </main>
+
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/funciones.js"></script>
+  </body>
+</html>

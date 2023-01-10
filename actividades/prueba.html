@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba Formulario</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/icons/bootstrap-icons.css" />
+    <script src="../js/funciones.js"></script>
+  </head>
+  <body>
+    <main class="container p-5">
+      <div class="m-0 d-flex justify-content-center align-items-center">
+        <p class="my-0 mx-2 fs-2 text-center font-monospace">
+          Prueba de un formulario:
+        </p>
+        <button
+          class="mx-2 col-sm-6 col-md-4 col-lg-2 btn btn-primary btn-sm"
+          onclick="descripcion()"
+        >
+          Mostrar descripción
+        </button>
+        <dialog id="modal" class="col-6 rounded">
+          <div class="mb-3 d-flex justify-content-end">
+            <button class="btn btn-secondary btn-sm" onclick="cerrar()">
+              <b><i class="bi bi-x-lg"></i></b>
+            </button>
+          </div>
+          <p class="fs-5 font-monospace text-center">
+            <b>Prueba de un formulario:</b> Se diseñará un formulario con los
+            datos presentados en la figura siguiente. En el combo (select) se
+            presentarán las siguientes opciones: a) Al azar. b) Le indicaron la
+            URL de la página. c) A través de un buscador (opción por defecto) y
+            d) Mediante un enlace desde otra página. <br />
+            Al pulsarse el botón AÑADIR se introducirán apellidos, nombre y
+            correo electrónico en la lista y cuando se haga clic en el botón
+            VISUALIZAR DATOS se presentarán todos los datos elegidos en un
+            cuadro de diálogo alert. <br />
+            Al pulsar el botón eliminar se borra la selección de la lista.
+            ¿selección activa? ¿último elemento introducido? ¿Cómo actúo si nó
+            hay ningún elemento seleccionado? <br />
+            Validar la dirección de correo electrónico.
+          </p>
+        </dialog>
+      </div>
+
+      <div class="mt-4 d-flex justify-content-center">
+        <a class="mx-2 btn btn-secondary" href="../index.html">Volver</a>
+      </div>
+    </main>
+
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/funciones.js"></script>
+  </body>
+</html>
