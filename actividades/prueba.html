@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/bootstrap.css" />
     <link rel="stylesheet" href="../css/icons/bootstrap-icons.css" />
     <script src="../js/funciones.js"></script>
+    <script src="../js/prueba.js"></script>
   </head>
   <body>
     <main class="container p-5">
@@ -24,7 +25,11 @@
         </button>
         <dialog id="modal" class="col-6 rounded">
           <div class="mb-3 d-flex justify-content-end">
-            <button class="btn btn-secondary btn-sm" onclick="cerrar()">
+            <button
+              title="cerrar"
+              class="btn btn-secondary btn-sm"
+              onclick="cerrar()"
+            >
               <b><i class="bi bi-x-lg"></i></b>
             </button>
           </div>
@@ -46,12 +51,145 @@
         </dialog>
       </div>
 
+      <div class="d-flex justify-content-evenly mt-4">
+        <div>
+          <fieldset class="border rounded p-2">
+            <legend class="float-none w-auto p-2 font-monospace fs-5 mb-0">
+              Datos personales:
+            </legend>
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text">Apellidos</span>
+              <input
+                id="apellidos"
+                type="text"
+                class="form-control"
+                title="Apellidos"
+              />
+            </div>
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text">Nombre</span>
+              <input
+                id="nombre"
+                type="text"
+                class="form-control"
+                title="Nombre"
+              />
+            </div>
+            <div class="d-flex mb-3">
+              <span
+                class="input-group-text border-end-0 rounded-0 rounded-start"
+                >Sexo</span
+              >
+              <div class="form-control rounded-0 rounded-end">
+                <div class="form-check">
+                  <input
+                    id="hombre"
+                    name="sexo"
+                    type="radio"
+                    class="form-check-input"
+                    title="Hombre"
+                  />
+                  <span class="form-check-label">Hombre</span>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="mujer"
+                    name="sexo"
+                    type="radio"
+                    class="form-check-input"
+                    title="Mujer"
+                  />
+                  <span class="form-check-label">Mujer</span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group input-group-sm mb-1">
+              <span class="input-group-text">Correo electrónico</span>
+              <input
+                id="correo"
+                type="text"
+                class="form-control"
+                title="Correo"
+              />
+            </div>
+          </fieldset>
+          <fieldset class="border rounded p-2">
+            <legend class="float-none w-auto p-2 font-monospace fs-5 mb-0">
+              Información:
+            </legend>
+            <div class="d-flex mb-3">
+              <span
+                class="input-group-text border-end-0 rounded-0 rounded-start"
+                >¿Cómo llegó hasta aquí?</span
+              >
+              <select
+                id="select1"
+                class="form-select rounded-0 rounded-end"
+                title="¿Cómo llegó hasta aquí?"
+              >
+                <option value="a">Al azar</option>
+                <option value="b">Le indicaron la URL de la página</option>
+                <option value="c" selected>A través de un buscador</option>
+                <option value="d">Mediante un enlace desde otra página</option>
+              </select>
+            </div>
+            <div class="mb-1">
+              <span
+                class="input-group-text border-bottom-0 rounded-0 rounded-top"
+                >¿Desearía más información sobre:?</span
+              >
+              <div class="form-control rounded-0 rounded-bottom">
+                <div class="form-check">
+                  <input
+                    id="material"
+                    name="informacion"
+                    type="checkbox"
+                    class="form-check-input"
+                    title="Material audiovisual"
+                  />
+                  <span class="form-check-label">Material audiovisual</span>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="textos"
+                    name="informacion"
+                    type="checkbox"
+                    class="form-check-input"
+                    title="Textos electrónicos"
+                  />
+                  <span class="form-check-label">Textos electrónicos</span>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="libros"
+                    name="informacion"
+                    type="checkbox"
+                    class="form-check-input"
+                    title="Libros de texto"
+                  />
+                  <span class="form-check-label">Libros de texto</span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div>
+          <p class="fs-2 font-monospace text-center bg-light px-5">Editorial Ciclos F.P.</p>
+          <select
+            id="select2"
+            class="form-select"
+            title="Usuarios"
+            size="10"
+          ></select>
+        </div>
+      </div>
+
       <div class="mt-4 d-flex justify-content-center">
-        <a class="mx-2 btn btn-secondary" href="../index.html">Volver</a>
+        <a class="col-4 mx-2 btn btn-secondary" href="../index.html">Volver</a>
       </div>
     </main>
 
     <script src="../js/bootstrap.bundle.js"></script>
-    <script src="../js/funciones.js"></script>
   </body>
 </html>
