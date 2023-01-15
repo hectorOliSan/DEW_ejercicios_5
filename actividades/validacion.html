@@ -46,7 +46,7 @@
             <li>Fecha de permiso una fecha válida sin especificar rango</li>
             <li>
               La matrícula responderá al patrón
-              "NNNN[BCDFGHJKLMNPQRSTVWXYZ][BCDFGHJKLMNPQRSTVWXY Z]
+              "NNNN[BCDFGHJKLMNPQRSTVWXYZ][BCDFGHJKLMNPQRSTVWXYZ]
               [BCDFGHJKLMNPORSTVWXYZ]"
             </li>
             <li>Importe entero o real sin signo</li>
@@ -65,6 +65,160 @@
         </dialog>
       </div>
 
+      <div class="m-0 d-flex justify-content-center align-items-center">
+        <dialog id="dialogo" class="col-6 rounded">
+          <div class="mb-3 d-flex justify-content-end">
+            <button
+              title="cerrar-dialogo"
+              class="btn btn-secondary btn-sm"
+              onclick="cerrarDialogo()"
+            >
+              <b><i class="bi bi-x-lg"></i></b>
+            </button>
+          </div>
+          <p id="mensaje" class="fs-5 font-monospace text-center"></p>
+        </dialog>
+      </div>
+
+      <div class="d-flex justify-content-evenly align-items-center mt-4 pt-0">
+        <div class="mx-2 col-6">
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Nombre</span>
+            <input
+              id="nombre"
+              type="text"
+              class="form-control"
+              title="Nombre"
+              onkeypress="soloLetras()"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Apellido 1</span>
+            <input
+              id="apellido1"
+              type="text"
+              class="form-control"
+              title="Apellido 1"
+              onkeypress="soloLetras()"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Edad</span>
+            <input
+              id="edad"
+              type="text"
+              class="form-control"
+              title="Edad"
+              onkeypress="soloNumeros()"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Matrícula</span>
+            <input
+              id="matricula"
+              type="text"
+              class="form-control"
+              title="Matrícula"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Nº de Tarjeta</span>
+            <input
+              id="tarjeta"
+              type="text"
+              class="form-control"
+              title="Nº de Tarjeta"
+              onkeypress="soloNumeros()"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Mes de Expiración</span>
+            <input
+              id="mes"
+              type="text"
+              class="form-control"
+              title="Mes de Expiración"
+              onkeypress="soloNumeros()"
+            />
+          </div>
+        </div>
+
+        <div class="mx-2 col-6">
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Nº de Expediente</span>
+            <input
+              id="expediente"
+              type="text"
+              class="form-control"
+              title="Nº de Expediente"
+              onkeypress="soloNumeros()"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Apellido 2</span>
+            <input
+              id="apellido2"
+              type="text"
+              class="form-control"
+              title="Apellido 2"
+              onkeypress="soloLetras()"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Fecha de Permiso</span>
+            <input
+              id="permiso"
+              type="text"
+              class="form-control"
+              title="Fecha de Permiso"
+              onkeypress="soloNumerosBarra()"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Importe</span>
+            <input
+              id="importe"
+              type="text"
+              class="form-control"
+              title="Importe"
+              onkeypress="soloNumerosComa()"
+            />
+          </div>
+          <div class="d-flex mb-3">
+            <span class="input-group-text border-end-0 rounded-0 rounded-start"
+              >Tipo de Tarjeta</span
+            >
+            <select
+              id="tipo"
+              class="form-select rounded-0 rounded-end"
+              title="Tipo de Tarjeta"
+            >
+              <option value="Generica">Genérica</option>
+              <option value="AmericanExpress">American Express</option>
+              <option value="DinersClub">Diner's Club</option>
+              <option value="MasterCard">Master Card</option>
+              <option value="Visa">Visa</option>
+            </select>
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Año de Expiración</span>
+            <input
+              id="año"
+              type="text"
+              class="form-control"
+              title="Año de Expiración"
+              onkeypress="soloNumeros()"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 d-flex justify-content-center">
+        <button class="col-4 mx-2 btn btn-primary" onclick="validar()">
+          Validar formulario
+        </button>
+      </div>
+
       <div class="mt-4 d-flex justify-content-center">
         <a class="col-4 mx-2 btn btn-secondary" href="../index.html">Volver</a>
       </div>
@@ -72,5 +226,6 @@
 
     <script src="../js/bootstrap.bundle.js"></script>
     <script src="../js/funciones.js"></script>
+    <script src="../js/validacion.js"></script>
   </body>
 </html>
