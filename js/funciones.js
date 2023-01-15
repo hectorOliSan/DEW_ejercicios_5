@@ -13,16 +13,43 @@ function cerrar() {
   window.modal.close();
 }
 
-function random_num() {
-  return Math.floor(Math.random() * 10 + 1);
+function mostrarDialogo() {
+  if (!dialogo.open) window.dialogo.showModal();
 }
 
-function reiniciar() {
-  document.location.reload();
+function cerrarDialogo() {
+  window.dialogo.close();
 }
 
-let borrar_ayuda = (ayuda) =>
-  setTimeout(() => {
-    ayuda.innerText = "";
-  }, 3000);
+function soloLetras() {
+  let caracter = event.charCode || event.keyCode;
+  if (
+    (caracter < 65 || caracter > 90) &&
+    (caracter < 97 || caracter > 122) &&
+    (caracter < 192 || caracter > 255) &&
+    caracter != 32
+  ) {
+    event.preventDefault();
+  }
+}
 
+function soloNumeros() {
+  let caracter = event.charCode || event.keyCode;
+  if (caracter < 48 || caracter > 57) {
+    event.preventDefault();
+  }
+}
+
+function soloNumerosComa() {
+  let caracter = event.charCode || event.keyCode;
+  if ((caracter < 48 || caracter > 57) && caracter != 44) {
+    event.preventDefault();
+  }
+}
+
+function soloNumerosBarra() {
+  let caracter = event.charCode || event.keyCode;
+  if ((caracter < 48 || caracter > 57) && caracter != 47) {
+    event.preventDefault();
+  }
+}
