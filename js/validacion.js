@@ -135,7 +135,7 @@ function esBisiesto(aaaa) {
 
 function validarMatricula() {
   if (!validarTexto(matricula)) return false;
-  const patron = /^\d{4}[B-Z]{3}$/;
+  const patron = /^\d{4}[BCDFGHJKLMNPQRSTVWXYZ]{3}$/;
   if (!patron.test(matricula.value)) {
     mensaje.textContent =
       `ERROR: El formato debe ser: "NNNN[BCDFGHJKLMNPQRSTVWXYZ]` +
