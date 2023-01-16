@@ -40,9 +40,9 @@ function soloNumeros() {
   }
 }
 
-function soloNumerosComa() {
+function soloNumerosPuntoComa() {
   let caracter = event.charCode || event.keyCode;
-  if ((caracter < 48 || caracter > 57) && caracter != 44) {
+  if ((caracter < 48 || caracter > 57) && caracter != 44 && caracter != 46) {
     event.preventDefault();
   }
 }
